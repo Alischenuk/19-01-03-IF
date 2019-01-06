@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./indexJS.css" rel="stylesheet">
+    <title>Check your weight and your door</title>    
+</head>
+<body>
+    <div class="task1">
+        <h1>Задача 1</h1> 
+        Hахождение индекса массы тела человека
+    </div>
+    <div class="task2">
+        <h1>Задача 2</h1>
+        Проверка работы сигнализации, установленной на дверь
+    </div>
+    <script>
+        let weight = 65;
+        let height = 1.7;
+        let age = 30;
+        let BodyMassIndex = weight / Math.pow(height,2);
+
+        if (age > 18 && age <= 25) {
+            if (BodyMassIndex < 19.6) {
+                console.log('Вес снижен, кушайте лучше');
+            } else if (BodyMassIndex >= 19.6 && BodyMassIndex <= 23) {
+                console.log('Вес нормальный, живите в удовольствие, но спортом занимайтесь!');
+            } else {
+                console.log('Ваш вес избыточный, пора садиться на диету и увеличить физическую нагрузку');
+            }
+        } else if (age > 26 && age <= 46) {
+            if (BodyMassIndex < 20) {
+                console.log('Вес снижен, кушайте лучше');
+            } else if (BodyMassIndex >= 20 && BodyMassIndex <= 26) {
+                console.log('Вес нормальный, живите в удовольствие, но спортом занимайтесь!');
+            } else {
+                console.log('Ваш вес избыточный, пора садиться на диету и увеличить физическую нагрузку');
+            }
+        }
+        console.log(BodyMassIndex);
+    </script>
+    <script src="./door.js"></script>    
+</body>
+</html>
